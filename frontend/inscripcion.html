@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripción de Bandas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Inscripción de Bandas</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="inscripcion.html">Inscripción</a>
+      <a href="bandas.html">Bandas inscritas</a>
+    </nav>
+  </header>
+
+  <section class="form-container">
+    <form id="formBanda">
+      <label>Nombre de la banda</label>
+      <input type="text" name="nombre" required>
+
+      <label>Género</label>
+      <input type="text" name="genero" required>
+
+      <label>Biografía</label>
+      <textarea name="bio"></textarea>
+
+      <label>Enlaces (Spotify, YouTube...)</label>
+      <input type="text" name="enlaces">
+
+      <label>Email de contacto</label>
+      <input type="email" name="email" required>
+
+      <label>Teléfono</label>
+      <input type="text" name="telefono">
+
+      <label>Ciudad</label>
+      <input type="text" name="ciudad">
+
+      <button type="submit">Enviar inscripción</button>
+    </form>
+
+    <p id="mensaje"></p>
+  </section>
+
+  <script src="js/api.js"></script>
+  <script src="js/inscripcion.js"></script>
+</body>
+</html>
