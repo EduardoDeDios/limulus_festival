@@ -1,21 +1,19 @@
-document.getElementById("formBanda").addEventListener("submit", async (e) => {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-  const data = Object.fromEntries(new FormData(e.target));
+    const form = document.getElementById("formBanda");
 
-  try {
-    const res = await fetch(`${API_URL}/inscripcion`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // evita el GET
+
+        const data = Object.fromEntries(new FormData(form));
+
+        const res = await fetch(`${API_URL}/inscripcion`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+
+        const json = await res.json();
+        document.getElementById("mensaje").textContent = json.message;
     });
-
-    const json = await res.json();
-    document.getElementById("mensaje").textContent =
-      json.message || "Inscripción enviada correctamente";
-    e.target.reset();
-  } catch (err) {
-    document.getElementById("mensaje").textContent =
-      "Error al enviar la inscripción";
-  }
 });

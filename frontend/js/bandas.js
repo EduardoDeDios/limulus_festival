@@ -31,4 +31,4 @@ async function cargarBandas() {
   }
 }
 
-cargarBandas();
+document.addEventListener("DOMContentLoaded", cargarBandas);
