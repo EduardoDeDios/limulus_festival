@@ -30,5 +30,4 @@ async function cargarBandas() {
       "Error al cargar las bandas.";
   }
 }
-
 document.addEventListener("DOMContentLoaded", cargarBandas);
