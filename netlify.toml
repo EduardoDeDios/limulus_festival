@@ -1,6 +1,5 @@
 # example netlify.toml
 [build]
-  functions = "frontend/netlify/functions"
   publish = "frontend"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
@@ -14,7 +13,6 @@
   ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
 [dev]
   publish = "frontend"
-  functions = "frontend/netlify/functions"
 
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
