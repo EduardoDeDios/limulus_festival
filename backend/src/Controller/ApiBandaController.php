@@ -24,6 +24,7 @@ class ApiBandaController
         $banda->setEmail($data['email'] ?? '');
         $banda->setTelefono($data['telefono'] ?? null);
         $banda->setCiudad($data['ciudad'] ?? null);
+        $banda->setImagen($data['imagen'] ?? null);
         $banda->setFechaInscripcion(new \DateTime());
 
         $em->persist($banda);
@@ -31,6 +32,7 @@ class ApiBandaController
 
         return new JsonResponse(['message' => 'Banda inscrita correctamente'], 201);
     }
+
 
     #[Route('/api/bandas', name: 'api_listar_bandas', methods: ['GET'])]
     public function listar(EntityManagerInterface $em): JsonResponse
@@ -49,6 +51,7 @@ class ApiBandaController
                 'email' => $banda->getEmail(),
                 'telefono' => $banda->getTelefono(),
                 'ciudad' => $banda->getCiudad(),
+                'imagen' => $banda->getImagen(),
                 'fechaInscripcion' => $banda->getFechaInscripcion()->format('Y-m-d H:i:s'),
             ];
         }
