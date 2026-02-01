@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const data = Object.fromEntries(new FormData(form));
 
-        const res = await fetch(`${API_URL}/inscripcion`, {
+        const res = await fetch(`${API_URL}/api/inscripcion`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
