@@ -1,6 +1,6 @@
 async function cargarBandas() {
   try {
-    const res = await fetch(`${API_URL}/api`);
+    const res = await fetch(`${API_URL}/api/bandas`);
     const bandas = await res.json();
 
     const contenedor = document.getElementById("listaBandas");
