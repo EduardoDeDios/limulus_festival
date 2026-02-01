@@ -1,2 +1,2 @@
-const API_URL = "http://limulus-festival-backend.onrender.com/api";
+const API_URL = "https://limulus-festival-backend.onrender.com/api";
 
