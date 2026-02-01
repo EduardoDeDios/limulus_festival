@@ -1,0 +1,219 @@
+/* ===========================
+   ESTILO GLOBAL – LIMULUS FESTIVAL
+   =========================== */
+
+
+/* Fondo general con textura metálica ligera */
+
+body {
+    background: #0a0a0a;
+    color: #e6e6e6;
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+
+/* ===========================
+   TIPOGRAFÍA
+   =========================== */
+
+h1,
+h2,
+h3 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff2a2a;
+    text-shadow: 0 0 10px #8b0000;
+}
+
+
+/* ===========================
+   NAVBAR
+   =========================== */
+
+nav {
+    background: #111;
+    padding: 15px 25px;
+    border-bottom: 2px solid #550000;
+    box-shadow: 0 0 10px #330000;
+}
+
+nav a {
+    color: #ff2a2a;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+
+/* ===========================
+   CONTENEDORES
+   =========================== */
+
+section,
+.container {
+    background: rgba(20, 20, 20, 0.85);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+}
+
+
+/* ===========================
+   BOTONES
+   =========================== */
+
+button,
+.btn {
+    background: linear-gradient(145deg, #8b0000, #ff2a2a);
+    border: 2px solid #550000;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+button:hover,
+.btn:hover {
+    background: #ff4444;
+    box-shadow: 0 0 10px #ff0000;
+    transform: scale(1.05);
+}
+
+
+/* ===========================
+   FORMULARIOS
+   =========================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    color: #e6e6e6;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff2a2a;
+    outline: none;
+    box-shadow: 0 0 8px #ff2a2a;
+}
+
+
+/* ===========================
+   TABLA DE BANDAS (ESTILO METAL)
+   =========================== */
+
+.bandas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    border: 2px solid #550000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.bandas-table thead {
+    background: #550000;
+    color: white;
+}
+
+.bandas-table th {
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #330000;
+}
+
+.bandas-table td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.bandas-table tbody tr:hover {
+    background: #1a0000;
+}
+
+
+/* Imagen de banda */
+
+.banda-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #550000;
+    border-radius: 4px;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .bandas-table thead {
+        display: none;
+    }
+    .bandas-table tr {
+        display: block;
+        margin-bottom: 15px;
+        background: #111;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .bandas-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #333;
+    }
+    .bandas-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #ff2a2a;
+    }
+}
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}

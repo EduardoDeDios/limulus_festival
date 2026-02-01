@@ -2,55 +2,66 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Inscripción de Bandas</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción — Limulus Festival</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Inscripción de Bandas</h1>
+
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="inscripcion.html">Inscripción</a>
-      <a href="bandas.html">Bandas inscritas</a>
+        <a href="index.html">Inicio</a>
+        <a href="bandas.html">Bandas</a>
+        <a href="inscripcion.html">Inscripción</a>
     </nav>
-  </header>
 
-  <section class="form-container">
-    <form id="formBanda">
-      <label>Nombre de la banda</label>
-      <input type="text" name="nombre" required>
+    <header style="text-align:center; padding:20px;">
+        <h1>Inscripción de Bandas</h1>
+    </header>
 
-      <label>Género</label>
-      <input type="text" name="genero" required>
+    <section class="container">
+        <form id="formBanda">
 
-      <label>Biografía</label>
-      <textarea name="bio"></textarea>
+            <label>Nombre de la banda</label>
+            <input type="text" name="nombre" required>
 
-      <label>Enlaces (Spotify, YouTube...)</label>
-      <input type="text" name="enlaces">
+            <label>Género</label>
+            <input type="text" name="genero" required>
 
-      <label>Email de contacto</label>
-      <input type="email" name="email" required>
+            <label>Biografía</label>
+            <textarea name="bio" rows="4"></textarea>
 
-      <label>Teléfono</label>
-      <input type="text" name="telefono">
+            <label>Enlaces (Spotify, YouTube...)</label>
+            <input type="text" name="enlaces">
 
-      <label>Ciudad</label>
-      <input type="text" name="ciudad">
+            <label>Email de contacto</label>
+            <input type="email" name="email" required>
 
-      <label>URL de imagen</label>
-      <input type="text" name="imagen" placeholder="https://...">
+            <label>Teléfono</label>
+            <input type="text" name="telefono">
 
-      <button type="submit">Enviar inscripción</button>
-    </form>
+            <label>Ciudad</label>
+            <input type="text" name="ciudad">
 
-    <p id="mensaje"></p>
-  </section>
+            <label>URL de imagen</label>
+            <input type="text" name="imagen" placeholder="https://...">
 
-  <script src="js/api.js"></script>
-  <script src="js/inscripcion.js"></script>
+            <button type="submit">Enviar inscripción</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </section>
+
+    <footer>
+        Limulus Festival © 2026 — Proyecto Intermodular II
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/inscripcion.js"></script>
+
 </body>
 
 </html>

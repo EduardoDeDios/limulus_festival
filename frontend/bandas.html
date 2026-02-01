@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Bandas Inscritas</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandas — Limulus Festival</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Bandas Inscritas</h1>
+
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="inscripcion.html">Inscripción</a>
-      <a href="bandas.html">Bandas inscritas</a>
+        <a href="index.html">Inicio</a>
+        <a href="bandas.html">Bandas</a>
+        <a href="inscripcion.html">Inscripción</a>
     </nav>
-  </header>
 
-  <section id="listaBandas" class="bandas-container">
-    <p>Cargando bandas...</p>
-  </section>
+    <header style="text-align:center; padding:20px;">
+        <h1>Bandas Inscritas</h1>
+    </header>
 
-  <script src="js/api.js"></script>
-  <script src="js/bandas.js"></script>
+    <section class="container">
+        <table class="bandas-table">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Género</th>
+                    <th>Ciudad</th>
+                    <th>Contacto</th>
+                </tr>
+            </thead>
+
+            <tbody id="listaBandas">
+                <!-- JS insertará aquí las bandas -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        Limulus Festival © 2026 — Proyecto Intermodular II
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/bandas.js"></script>
 </body>
+
 </html>
